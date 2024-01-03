@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Data Engineer at HCL Technologies Starschema, with a BSc in Computer Science and 
   currently pursuing an MSc in Data Science.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://targabor.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  targabor
 
 # Build settings
