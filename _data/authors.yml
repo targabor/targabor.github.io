@@ -1,0 +1,19 @@
+# Add Authors here
+rofa:
+   name: Gábor Tar
+   username: rofa
+   site: https://targabor.github.io/
+   avatar: author.jpg
+   bio: "Data Engineer @ HCL Tech Starschema | MSc in progress"
+   email: i.am.gabor.tar@gmail.com
+   social:
+      - title: "github"
+        url: "https://github.com/targabor"
+      - title: "linkedin"
+        url: "https://www.linkedin.com/in/gabor-tar"
+      # - title: "youtube"
+      #   url: "https://www.youtube.com/channel/UCSfLBFFfNU9r6ihfei6VeJw"
+      # - title: "twitter"
+        # url: "https://www.twitter.com/johndoe"
+      # - title: "medium"
+        # url: "https://medium.com/johndoe"

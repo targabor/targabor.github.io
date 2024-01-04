@@ -1,36 +1,152 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: Gabor Tar
-email: i.am.gabor.tar@gmail.com
+subtitle: Diving into Big Data My Personal and Professional Expedition
 description: >- # this means to ignore newlines until "baseurl:"
-  Data Engineer at HCL Technologies Starschema, with a BSc in Computer Science and 
-  currently pursuing an MSc in Data Science.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://targabor.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+  Embark on a learning journey with a Computer Science graduate delving into the intricacies of data engineering.
+  Follow along as I navigate through the basics, share insights from my ongoing Data Science MSc, 
+  and provide a glimpse into my experiences as a Data Engineer at HCL Technologies Starschema.
+
+url: "https://targabor.github.io" 
+baseurl: "" 
+
+# Navigation
+urls:
+    - text: Home
+      url: /
+    - text: About
+      url: /about
+    - text: Blog
+      url: /blog
+
+# Edit Author details (For multi authors check _data/authors.yml)
+
+author_logo: author.jpg
+author: Gábor Tar
+author_bio: Embark on a learning journey with a Computer Science graduate delving into the intricacies of data engineering. Follow along as I navigate through the basics, share insights from my ongoing Data Science MSc, and provide a glimpse into my experiences as a Data Engineer at HCL Technologies Starschema.
+author_email: "i.am.gabor.tar@gmail.com"
+author_location: Hungary
+author_website_url: "https://targabor.github.io/"
+typewrite-text: Data Engineer at HCL Tech. Starschema | BSc in Computer Science | MSc in Data Science (In Progress)
+hero_cover_img: my_cover.jpg 
+
+# Experiences
+author_work_experiences:
+            - company_name: HCL Technologies Starschema
+              company_logo: starschema.jpg
+              year: 2023.01 - Present
+              company_url: https://starschema.hcltech.com/
+              designation: Data Engineer
+              description: "External Projects:<br>AGCO | 2023.10 - Present <br>Responsibilities:<br>
+              <ul>
+              <li>Collaborating on the NPS (Net Promoter Score) project, actively using Python and various AWS services, including Athena, IAM, Glue, EC2, SES, etc.</li>
+              <li>Applying Databricks and SQL for data processing, analysis, and reporting within the project.</li>
+              <li>Contributing to API integration efforts, collaborating with senior team members to enhance system interoperability.</li>
+              <li>Providing technical support and guidance to team members, ensuring smooth project execution.</li>
+              <li>Participating in code reviews and contributing to the continuous improvement of coding practices within the team.</li>
+              </ul>"
+              visibility: true
+            - company_name: GriffSoft Informatikai Zrt.
+              company_logo: griffsoft.png
+              year: 2020.10 - 2022.12
+              company_url: https://www.griffsoft.hu/
+              designation: C# developer intern
+              description: "Intern of the Year 2022.<br><br>I worked on the interface of the FORRÁS system, an invoicing system, collaborating closely with the Business Analyst to meet client requirements and maintain the system's cleanliness.<br><br>I primarily worked with the .NET framework and Microsoft SQL but also had the opportunity to experiment with Elasticsearch."
+              visibility: true
+
+# Education
+author_education_details:
+              - college_logo: pannon.png
+                college_name: University of Pannonia
+                year: "2023.09 - Present (expected: 2025.07)"
+                college_url: https://international.uni-pannon.hu/
+                college_degree: Data Science
+                description: Master of Science
+                visibility: true
+              - college_logo: szte.jpg
+                college_name: University of Szeged
+                year: "2020.09 - 2023.07"
+                college_url: https://u-szeged.hu/english
+                college_degree: Computer Science
+                description: Bachelor of Science
+                visibility: true
+
+# Projects
+author_project_details:
+              - project_thumbnail: 
+                project_title: 
+                project_description: 
+                project_url: 
+                visibility: false
+
+# social links
+#twitter_username: 
 github_username:  targabor
+#facebook_username: 
+linkedin_username: gabor-tar
+#medium_username: 
+
+
+# mailchimp embedded form url (newsletter):
+#mailchimp_form_url:
+
+# releases - widget can be (sidebar, modal or embed)
+# olvy_organization: 
+# olvy_widget_type: sidebar
+
+# syntax highlighter
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Choose what to show ( can be true or false)
+show_author_work_experiences: true
+show_author_education_details: true
+show_author_project_details: false
+
+# pagination of posts
+paginate: 4
+per_page: 4
+paginate_path: "/blog/page/:num/"
+
+# minify
+# compress_html:
+#   clippings: all
+#   comments: ["<!-- ", " -->"]
+#   endings: all
+#   ignore:
+#     envs: ['development']
+
+# Archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#   layout: archive
+#   permalinks:
+#     category: '/category/:name/'
+
+collections:
+  authors:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
+      permalink: /blog/authors/:slug
+  -
+    scope:
+      path: 'assets/**'
+    values:
+      sitemap: false
 
 # Build settings
-theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -39,15 +155,48 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+### Switching Deployment Strategy (in DEPLOY_STRATEGY) file change the key accordingly:
+# none - For no default
+# gh-pages - For Github Pages
+# firebase - For Firebase Hosting
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - assets/bower_components/isotope-layout/README.md
+  - assets/bower_components/icono/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-svg-core/README.md
+  - assets/bower_components/ghosthunter/README.md
+  - assets/bower_components/nanobar/README.md
+  - assets/bower_components/lightgallery/demo/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-brands-svg-icons/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/free-solid-svg-icons/README.md
+  - assets/bower_components/jquery-mousewheel/README.md
+  - assets/bower_components/get-size/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome/README.md
+  - assets/bower_components/jquery-mousewheel/ChangeLog/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-regular/README.md
+  - assets/bower_components/desandro-matches-selector/README.md
+  - assets/bower_components/ev-emitter/README.md
+  - assets/bower_components/font-awesome/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-solid/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-webfonts/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-free-brands/README.md
+  - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-common-types/README.md
+  - assets/bower_components/ghosthunter/example/Index.html
+  - assets/bower_components/lightgallery/test/lightgallery.html
+  - assets/bower_components/masonry-layout/README.md
+  - assets/bower_components/imagesloaded/README.md
+
+
+destination: ./build
