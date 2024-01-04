@@ -6,3 +6,18 @@
 @import "devlopr";
 
 /* custom css goes below */
+
+/* CSS for centering the image */
+.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Optional: Ensures that padding and border are included in the total width and height */
+  }
+  
+  .centered-image img {
+    padding: 20px;
+    max-width: 100%;
+  }
